@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshCart | Organic & Fresh Everyday</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="floating-header">
+        <div class="logo">Fresh<span>Cart</span></div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+	    <a href="index.html#about">About us</a>
+            <a href="catalog.html#catalog"  class="active">Price Catalog</a>
+            
+            <a href="#bottom">Contact Us</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Freshness You Can Taste,<br>Quality You Can Trust</h1>
+        <p>Your neighborhood boutique for fresh fruits, organic veggies, and daily essentials.</p>
+        <a href="catalog.html" class="cta-btn">View Today's Prices</a>
+    </section>
+
+   <section class="grocery-catalog" id="catalog">
+  <div class="grocery-container">
+    
+    <h2>Daily Essentials & Price List</h2>
+    <p class="grocery-subtitle">Fresh quality items at the best prices. Updated daily.</p>
+    
+    <!-- Table Wrapper -->
+    <div class="table-responsive">
+      <table class="grocery-table">
+        <thead>
+          <tr>
+            <th>Item Name</th>
+            <th>Quantity / Unit</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Category: Rice & Dals -->
+          <tr class="category-row">
+            <td colspan="3">Rice, Dals & Grains</td>
+          </tr>
+          <tr>
+            <td>Premium Ponni Rice (பொன்னி அரிசி)</td>
+            <td>1 Kg</td>
+            <td class="price-tag">₹60</td>
+          </tr>
+          <tr>
+            <td>Toor Dal (துவரம் பருப்பு)</td>
+            <td>1 Kg</td>
+            <td class="price-tag">₹160</td>
+          </tr>
+          <tr>
+            <td>Urad Dal (உளுத்தம் பருப்பு)</td>
+            <td>500g</td>
+            <td class="price-tag">₹85</td>
+          </tr>
+
+          <!-- Category: Oils & Masalas -->
+          <tr class="category-row">
+            <td colspan="3">Oils & Packaged Items</td>
+          </tr>
+          <tr>
+            <td>Gold Winner Sunflower Oil</td>
+            <td>1 Litre Packet</td>
+            <td class="price-tag">₹145</td>
+          </tr>
+          <tr>
+            <td>Pure Gingelly Oil (நல்லெண்ணெய்)</td>
+            <td>500ml Bottle</td>
+            <td class="price-tag">₹190</td>
+          </tr>
+          <tr>
+            <td>Aashirvaad Atta</td>
+            <td>5 Kg Pack</td>
+            <td class="price-tag">₹290</td>
+          </tr>
+
+          <!-- Category: Daily Fresh -->
+          <tr class="category-row">
+            <td colspan="3">Daily Fresh Essentials</td>
+          </tr>
+          <tr>
+            <td>Fresh Milk Packet</td>
+            <td>500ml</td>
+            <td class="price-tag">₹30</td>
+          </tr>
+          <tr>
+            <td>Country Eggs (நாட்டுக்கோழி முட்டை)</td>
+            <td>1 Dozen (12 pcs)</td>
+            <td class="price-tag">₹110</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Contact details/Order via WhatsApp -->
+    <div class="grocery-footer">
+      <p>Want home delivery? Send your list to our WhatsApp! <a href="#bottom">View Contact Info</a></p>
+    </div>
+
+  </div>
+</section>
+
+<!-- The id="bottom" matches your anchor link so it scrolls here perfectly -->
+<footer class="contact-section" id="bottom">
+  <div class="contact-container">
+    
+    <!-- Left Column: Shop Info -->
+    <div class="contact-info">
+      <h3>Contact Us</h3>
+      <p class="contact-desc">Drop by our store or order online via WhatsApp. We deliver fresh essentials daily to your doorstep.</p>
+      
+      <div class="contact-details">
+        <p><strong>📍 Address:</strong> 12, Main Road, Near Anna Statue, Chennai, Tamil Nadu</p>
+        <p><strong>⏰ Timings:</strong> 7:00 AM - 9:30 PM (All Days)</p>
+        <p><strong>📧 Gmail:</strong> <a href="mailto:yourgroceryshop@gmail.com" class="text-link">yourgroceryshop@gmail.com</a></p>
+      </div>
+    </div>
+
+    <!-- Right Column: Social Media Links -->
+    <div class="contact-socials">
+      <h3>Connect With Us</h3>
+      <p class="contact-desc">Follow us for daily price updates, stock arrivals, and offers.</p>
+      
+      <div class="social-links-list">
+        <!-- WhatsApp Link -->
+        <a href="https://wa.me/919876543210?text=Hello,%20I%20want%20to%20order%20groceries" target="_blank" class="social-link whatsapp-color">
+          <span>💬 WhatsApp Order</span>
+        </a>
+
+        <!-- Instagram Link -->
+        <a href="https://instagram.com/your_shop_username" target="_blank" class="social-link insta-color">
+          <span>📸 Instagram Pages</span>
+        </a>
+
+        <!-- Facebook Link -->
+        <a href="https://facebook.com/your_shop_page" target="_blank" class="social-link fb-color">
+          <span>👥 Facebook Page</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Tiny Copyright Bar at the very bottom -->
+  <div class="footer-rights">
+    <p>© 2026 Your Grocery Store. All Rights Reserved.</p>
+  </div>
+</footer>
+
+    <script>
+        const header = document.querySelector('.floating-header');
+
+        window.addEventListener('scroll', function() {
+            // User page-oda top 50px area vittu keela vandhaale automatic center locking
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled-up');
+            } else {
+                // Return completely back to top left position only at absolute zero top
+                header.classList.remove('scrolled-up');
+            }
+        });
+    </script>
+</body>
+</html>

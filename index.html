@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshCart | Organic & Fresh Everyday</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="floating-header">
+        <div class="logo">Fresh<span>Cart</span></div>
+        <nav class="nav-links">
+            <a href="index.html" class="active">Home</a>
+	    <a href="#about">About us</a>
+            <a href="catalog.html#catalog">Price Catalog</a>
+            
+            <a href="#bottom">Contact Us</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Freshness You Can Taste,<br>Quality You Can Trust</h1>
+        <p>Your neighborhood boutique for fresh fruits, organic veggies, and daily essentials.</p>
+        <a href="catalog.html" class="cta-btn">View Today's Prices</a>
+    </section>
+
+    <section class="about-section"  id="about">
+        <div class="about-container">
+            <div class="about-text">
+                <h2>Our Story</h2>
+                <p>Started as a humble family initiative, FreshCart has grown into the community's favorite spot for pure, unadulterated farm produce. We bridge the gap between local farming roots and your kitchen table.</p>
+                <p>Every single item on our shelf undergoes strict quality vetting because your family's health is our utmost priority.</p>
+            </div>
+            <div class="about-image-box">
+                <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=600&q=80" alt="Our Beautiful Grocery Store Layout" class="store-img">
+            </div>
+        </div>
+    </section>
+
+    <section class="features-section">
+        <h2>Why Neighbors Love Us</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <span class="feature-icon">🌿</span>
+                <h3>100% Organic</h3>
+                <p>Sourced straight from certified organic fields with zero chemical treatment.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🧼</span>
+                <h3>Hygiene Verified</h3>
+                <p>Triple-washed produce stored under optimal temperature controls.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">💎</span>
+                <h3>Honest Pricing</h3>
+                <p>Direct farm sourcing ensures you pay the absolute best value daily.</p>
+            </div>
+        </div>
+    </section>
+
+<!-- The id="bottom" matches your anchor link so it scrolls here perfectly -->
+<footer class="contact-section" id="bottom">
+  <div class="contact-container">
+    
+    <!-- Left Column: Shop Info -->
+    <div class="contact-info">
+      <h3>Contact Us</h3>
+      <p class="contact-desc">Drop by our store or order online via WhatsApp. We deliver fresh essentials daily to your doorstep.</p>
+      
+      <div class="contact-details">
+        <p><strong>📍 Address:</strong> 12, Main Road, Near Anna Statue, Chennai, Tamil Nadu</p>
+        <p><strong>⏰ Timings:</strong> 7:00 AM - 9:30 PM (All Days)</p>
+        <p><strong>📧 Gmail:</strong> <a href="mailto:yourgroceryshop@gmail.com" class="text-link">yourgroceryshop@gmail.com</a></p>
+      </div>
+    </div>
+
+    <!-- Right Column: Social Media Links -->
+    <div class="contact-socials">
+      <h3>Connect With Us</h3>
+      <p class="contact-desc">Follow us for daily price updates, stock arrivals, and offers.</p>
+      
+      <div class="social-links-list">
+        <!-- WhatsApp Link -->
+        <a href="https://wa.me/919876543210?text=Hello,%20I%20want%20to%20order%20groceries" target="_blank" class="social-link whatsapp-color">
+          <span>💬 WhatsApp Order</span>
+        </a>
+
+        <!-- Instagram Link -->
+        <a href="https://instagram.com/your_shop_username" target="_blank" class="social-link insta-color">
+          <span>📸 Instagram Pages</span>
+        </a>
+
+        <!-- Facebook Link -->
+        <a href="https://facebook.com/your_shop_page" target="_blank" class="social-link fb-color">
+          <span>👥 Facebook Page</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Tiny Copyright Bar at the very bottom -->
+  <div class="footer-rights">
+    <p>© 2026 Your Grocery Store. All Rights Reserved.</p>
+  </div>
+</footer>
+
+    <script>
+        const header = document.querySelector('.floating-header');
+
+        window.addEventListener('scroll', function() {
+            // User page-oda top 50px area vittu keela vandhaale automatic center locking
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled-up');
+            } else {
+                // Return completely back to top left position only at absolute zero top
+                header.classList.remove('scrolled-up');
+            }
+        });
+    </script>
+</body>
+</html>
