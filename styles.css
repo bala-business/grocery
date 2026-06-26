@@ -15,7 +15,7 @@ html {
 body {
     background-color: #fcfdfc;
     color: #2c3e50;
-    padding-top: 90px; /* Prevents hero text from hiding behind fixed header */
+    padding-top: 90px; /* Prevents desktop hero text from hiding behind fixed header */
 }
 
 /* ==========================================
@@ -65,23 +65,11 @@ body {
     color: #2ecc71;
 }
 
-/* Header Scrolled State (Triggered via JS if needed) */
+/* Header Scrolled State */
 .floating-header.scrolled-up {
-    flex-direction: column !important;
-    justify-content: center !important;
-    gap: 8px !important;
-    padding: 12px 2% !important;
     background-color: #ffffff !important;
     box-shadow: 0 10px 25px rgba(46, 204, 113, 0.12) !important;
-}
-
-.floating-header.scrolled-up .logo {
-    font-size: 32px !important;
-    transform: scale(1.05) !important;
-}
-
-.floating-header.scrolled-up .nav-links {
-    margin-left: 0 !important;
+    padding: 10px 5% !important;
 }
 
 /* ==========================================
@@ -131,7 +119,7 @@ body {
    4. ABOUT SECTION 
    ========================================== */
 .about-section {
-    background-color: #ffffff; /* Crisp white background */
+    background-color: #ffffff; 
     max-width: 1200px;
     margin: 80px auto;
     padding: 80px 40px;
@@ -155,14 +143,14 @@ body {
 .about-content h2, 
 .about-text h2 {
     font-size: 2.5rem;
-    color: #111111; /* Dark near-black for heading */
+    color: #111111; 
     margin-bottom: 20px;
     font-weight: 700;
 }
 
 .about-text p {
     font-size: 1.1rem;
-    color: #555555; /* Solid gray letters for readability */
+    color: #555555; 
     line-height: 1.7;
     margin-bottom: 15px;
 }
@@ -187,7 +175,7 @@ body {
     width: 100%;
     max-width: 400px;
     height: 300px;
-    background-color: #f4f4f4; /* Light gray box placeholder */
+    background-color: #f4f4f4; 
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -467,6 +455,33 @@ body {
    8. GLOBAL RESPONSIVE MEDIA QUERIES
    ========================================== */
 @media (max-width: 768px) {
+    /* Fixes the layout spacing for cramped mobile navigation */
+    .floating-header {
+        flex-direction: column;
+        gap: 12px;
+        padding: 15px 2%;
+        text-align: center;
+    }
+
+    body {
+        padding-top: 130px; /* Gives extra space so text doesn't slide under the expanded mobile header */
+    }
+
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        margin-left: 0;
+    }
+
+    .nav-links a {
+        margin-left: 0; 
+        font-size: 14px;
+        padding: 4px 8px;
+    }
+
+    /* Core layout container wraps */
     .about-container {
         flex-direction: column;
         text-align: center;
@@ -495,9 +510,19 @@ body {
 }
 
 @media (max-width: 500px) {
+    /* Optimizes price catalog table margins and text for perfect alignment on small mobile viewports */
+    .grocery-catalog h2 {
+        font-size: 1.6rem;
+    }
+
     .grocery-table th, 
     .grocery-table td {
-        padding: 12px 10px;
-        font-size: 0.95rem;
+        padding: 10px 8px;
+        font-size: 0.9rem;
+    }
+
+    .grocery-table .category-row td {
+        font-size: 1rem;
+        padding: 10px 8px;
     }
 }
